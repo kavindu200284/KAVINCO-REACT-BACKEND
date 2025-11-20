@@ -20,5 +20,7 @@ app.get("/", (req, res) => {
   res.send("Backend is running 🚀");
 });
 
+
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
+const HOST = '127.0.0.1';  // bind only to localhost
+app.listen(PORT, HOST, () => console.log(`✅ Server running on ${HOST}:${PORT}`));
